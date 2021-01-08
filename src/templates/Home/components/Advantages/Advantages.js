@@ -71,9 +71,9 @@ const Advantages = () => {
         <div className="advantages__right-side">
           <SectionDetails
             subTitle="About us"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto sint vitae dolores perspiciatis amet sapiente!"
-            title="Our Provided"
-            highlightedTitle="Solutions."
+            description="We offer you solutions to save time in gathering helpful informations for a beautiful & colored life"
+            title="Best Solutions"
+            highlightedTitle="For you"
           />
         </div>
       </div>

@@ -125,9 +125,11 @@
   &__buttons {
     display: flex;
     > button {
-      &:first-child {
-        margin-right: 10px;
-      }
+      outline: none;
+    }
+    > a {
+      outline: none;
+      margin-right: 10px;
     }
   }
 }

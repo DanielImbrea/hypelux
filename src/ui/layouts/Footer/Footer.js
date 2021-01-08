@@ -59,13 +59,8 @@ const Footer = () => {
               delay={100}
             >
               <FooterSocial />
-              <p className="footer__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Ipsa facere iure autem.{" "}
-              </p>
               <div className="footer__contact">
-                <p>1234-123-1234</p>
-                <p>dani_imbrea@yahoo.com</p>
+                <p>colors_frame@gmail.com</p>
               </div>
             </ScrollAnimation>
 
@@ -83,27 +78,27 @@ const Footer = () => {
                 >
                   About us
                 </div>
-                <div
+                {/* <div
                   onClick={handleScroll}
                   data-section="projects"
                   className="footer__link"
                 >
                   Projects
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   onClick={handleScroll}
                   data-section="pricing"
                   className="footer__link"
                 >
                   Pricing
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   onClick={handleScroll}
                   data-section="testimonials"
                   className="footer__link"
                 >
                   Testimonials
-                </div>
+                </div> */}
                 <div
                   onClick={handleScroll}
                   data-section="contact"
@@ -134,80 +129,6 @@ const Footer = () => {
                 >
                   Terms and conditions
                 </Link>
-              </FooterBox>
-              <FooterBox title="Pages">
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-              </FooterBox>
-              <FooterBox title="Pages">
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
-                <div
-                  onClick={handleScroll}
-                  data-section="contact"
-                  className="footer__link"
-                >
-                  About us
-                </div>
               </FooterBox>
             </ScrollAnimation>
           </div>

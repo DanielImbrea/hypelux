@@ -17,12 +17,12 @@ const Home = () => {
     <>
       <Header />
       <Advantages />
-      <Solutions />
-      <Examples />
-      <Projects />
-      <Pricing />
-      <Testimonials />
-      <Posts />
+      {/* <Solutions /> */}
+      {/* <Examples /> */}
+      {/* <Projects /> */}
+      {/* <Pricing /> */}
+      {/* <Testimonials /> */}
+      {/* <Posts /> */}
       <ContactFaq />
     </>
   );

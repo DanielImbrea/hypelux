@@ -12,9 +12,9 @@ const TagRoute = ({ data, pathContext: { tag } }) => {
     <Layout
       header={{ color: "black", isFixed: false }}
       seo={{
-        title: `Devsplan | ${tag} - Web development solutions`,
+        title: `Colors Frame | ${tag} - Web development solutions`,
         description:
-          "Devsplan is a digital marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
+          "Colors Frame is a digital marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
       }}
     >
       <TagView

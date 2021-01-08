@@ -6,6 +6,7 @@ import HeaderBackgroundIllustration from "@components/svg/HeaderBackgroundIllust
 import ScrollDownElement from "@containers/ScrollElement";
 import ParticleX from "@components/svg/ParticleX";
 import ParticleCircle from "@components/svg/ParticleCircle";
+import { Link } from "gatsby";
 
 import "./Header.styles.scss";
 
@@ -35,14 +36,16 @@ const Header = () => {
       <ParticleCircle className="header__particle-4 anim-xParticlePathHorizontal" />
       <div className="header__left-side">
         <div className="header__details">
-          <h1 className="title">Digital Agency Template.</h1>
+          <h1 className="title">Colors Frame</h1>
           <p className="description">
-            Search through a variety of react templates, react blogs,
-            dashboards, landing pages, react portfolios, stores and
-            many more. Check it out!
+            Search through a variety of Home Painting Ideas. Learning
+            how to enjoy and use the world of colors and many more.
+            Check it out!
           </p>
           <div className="header__buttons">
-            <Button>Check our services</Button>
+            <Link className="to__blog" to="/blog">
+              <Button>To Blog</Button>
+            </Link>{" "}
             <Button hasOutline>Contact</Button>
           </div>
         </div>

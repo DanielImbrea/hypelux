@@ -12,9 +12,9 @@ const SearchPage = ({ data, ...rest }) => {
     <Layout
       header={{ color: "black", isFixed: false }}
       seo={{
-        title: "Devsplan | Web development solutions",
+        title: "Colors Frame | Web development solutions",
         description:
-          "Devsplan is a digital marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
+          "Colors Frame is a digital marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
       }}
     >
       <SearchTemplate

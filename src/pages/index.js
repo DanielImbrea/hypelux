@@ -6,9 +6,9 @@ const HomePage = () => {
   return (
     <Layout
       seo={{
-        title: "Devsplan | Web development solutions",
+        title: "Colors Frame | Web development solutions",
         description:
-          "Devsplan is a digital marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
+          "Colors Frame marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
       }}
     >
       <HomeTemplate />
