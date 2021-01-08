@@ -1,0 +1,60 @@
+@import "@styles/utils";
+
+.sidebar-post {
+  height: 80px;
+  width: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+  &__key {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    height: 30px;
+    width: 30px;
+    background-color: $color-main;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: white;
+  }
+  &__image {
+    width: 100px;
+    .gatsby-image-wrapper {
+      height: 100%;
+    }
+  }
+  &__details {
+    margin-left: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 2rem;
+    @include breakpoint("to-tablet") {
+      font-size: 1.7rem;
+      line-height: 2.1rem;
+    }
+    @include breakpoint("phone") {
+      font-size: 1.5rem;
+    }
+  }
+  &__description {
+    font-size: 1.5rem;
+    color: rgba(black, 0.7);
+    @include breakpoint("to-tablet") {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+    @include breakpoint("phone") {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+@import "@styles/utils";
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  position: relative;
+  &__particle-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include breakpoint("phone") {
+      display: none;
+    }
+  }
+  &__particle-2 {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    @include breakpoint("phone") {
+      display: none;
+    }
+  }
+  &__particle-3 {
+    position: absolute;
+    top: 160px;
+    right: 0;
+    @include breakpoint("phone") {
+      display: none;
+    }
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      font-size: 20px;
+      color: #3b9fff;
+      position: relative;
+      font-weight: 600;
+      &:before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        background-color: #3b9dff;
+        right: -60px;
+        top: 50%;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        background-color: #3b9dff;
+        left: -60px;
+        top: 50%;
+      }
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 50px;
+    }
+    .subtitle {
+      font-size: 50px;
+      font-weight: 300;
+      margin-top: -8px;
+    }
+  }
+  &__boxes {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    z-index: 1;
+    @include breakpoint("to-tablet") {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  &__illustration {
+    position: absolute;
+    left: 0;
+    top: -10%;
+    .inner-path {
+      animation: postsBgIllustration 11s infinite ease-in-out;
+    }
+    .outer-path {
+      animation: posts2BgIllustration 11s infinite ease-in-out;
+    }
+    &--right {
+      top: unset;
+      left: unset;
+      right: 0;
+      bottom: -20%;
+      .inner-path-right {
+        animation: postsRightBgIllustration 11s infinite ease-in-out;
+      }
+      .outer-path-right {
+        animation: postsRight2BgIllustration 11s infinite ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes postsBgIllustration {
+  0% {
+    d: path(
+      "M155.247 211.55C295.917 67.718 60.6718 17.5053 -2.70326 0.255859L-2.70338 660.285C6.23399 646.629 78.515 597.557 105.815 550.983C139.941 492.766 28.8449 340.793 155.247 211.55Z"
+    );
+  }
+  50% {
+    d: path(
+      "M105.815 201.663C186.554 41.8333 60.6721 17.5053 -2.70302 0.255859L-2.70314 660.285C6.23424 646.629 101.583 574.489 128.883 527.915C163.009 469.698 24.3038 363.023 105.815 201.663Z"
+    );
+  }
+  100% {
+    d: path(
+      "M155.247 211.55C295.917 67.718 60.6718 17.5053 -2.70326 0.255859L-2.70338 660.285C6.23399 646.629 78.515 597.557 105.815 550.983C139.941 492.766 28.8449 340.793 155.247 211.55Z"
+    );
+  }
+}
+
+@keyframes posts2BgIllustration {
+  0% {
+    d: path(
+      "M115.702 228.027C256.372 84.1954 61.4183 27.31 -1.9568 10.0605V637.774C6.98058 624.119 55.2311 582.01 82.5314 535.437C116.657 477.22 -10.7001 357.27 115.702 228.027Z"
+    );
+  }
+  50% {
+    d: path(
+      "M82.5314 191.777C145.361 46.7765 61.4185 27.31 -1.95664 10.0605V637.774C6.98073 624.119 78.5147 569.545 105.815 522.972C139.94 464.754 10.6559 357.654 82.5314 191.777Z"
+    );
+  }
+
+  100% {
+    d: path(
+      "M115.702 228.027C256.372 84.1954 61.4183 27.31 -1.9568 10.0605V637.774C6.98058 624.119 55.2311 582.01 82.5314 535.437C116.657 477.22 -10.7001 357.27 115.702 228.027Z"
+    );
+  }
+}
+@keyframes postsRightBgIllustration {
+  0% {
+    d: path(
+      "M33.7059 269.53C-22.2295 110.119 44.0682 46.3177 97.2855 31.833V558.936C89.7806 547.469 42.4708 515.366 26.3391 473.001C-5.89802 388.34 84.9988 415.71 33.7059 269.53Z"
+    );
+  }
+  50% {
+    d: path(
+      "M107.241 181.974C58.5143 17.231 112.069 46.3177 165.287 31.833V558.936C157.782 547.469 57.7616 455.54 41.6299 413.175C9.39275 328.514 151.18 330.53 107.241 181.974Z"
+    );
+  }
+  100% {
+    d: path(
+      "M33.7059 269.53C-22.2295 110.119 44.0682 46.3177 97.2855 31.833V558.936C89.7806 547.469 42.4708 515.366 26.3391 473.001C-5.89802 388.34 84.9988 415.71 33.7059 269.53Z"
+    );
+  }
+}
+
+@keyframes postsRight2BgIllustration {
+  0% {
+    d: path(
+      "M24.1671 283.334C-39.1819 126.722 44.6953 15.0355 97.9126 0.550781L97.9124 577.837C90.4075 566.37 13.3793 517.309 2.76905 473.235C-14.6163 401.019 63.9764 381.751 24.1671 283.334Z"
+    );
+  }
+  50% {
+    d: path(
+      "M86.933 186.66C51.5356 21.4704 112.696 15.0355 165.914 0.550781L165.913 577.837C158.409 566.37 13.1854 446.313 2.57519 402.24C-14.8101 330.024 115.052 317.883 86.933 186.66Z"
+    );
+  }
+
+  100% {
+    d: path(
+      "M24.1671 283.334C-39.1819 126.722 44.6953 15.0355 97.9126 0.550781L97.9124 577.837C90.4075 566.37 13.3793 517.309 2.76905 473.235C-14.6163 401.019 63.9764 381.751 24.1671 283.334Z"
+    );
+  }
+}

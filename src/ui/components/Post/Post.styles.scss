@@ -1,0 +1,166 @@
+@import "@styles/utils";
+
+.post {
+  display: flex;
+  margin: 80px 0;
+  flex-direction: column;
+
+  &__image {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 30px;
+    max-height: 500px;
+    img {
+      object-position: center center;
+    }
+    @include breakpoint("to-tablet-p") {
+      max-height: 100%;
+    }
+    &__container {
+      position: relative;
+    }
+    &--bg-design {
+      position: absolute;
+      top: -10px;
+      left: -20px;
+      transition: all 0.3s ease-in-out;
+      background: $color-main;
+      opacity: 0.15;
+      height: 100%;
+      width: 100%;
+      transform: rotate(1deg);
+      border-radius: 30px;
+
+      @include breakpoint("to-tablet-p") {
+        max-height: 100%;
+      }
+    }
+
+    &--design {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 0;
+      height: 100%;
+      width: 100%;
+
+      @include breakpoint("to-tablet-p") {
+        max-height: 100%;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center center;
+      transition: all 0.3s ease-in-out !important;
+      height: 100%;
+      width: 100%;
+
+      @include breakpoint("to-tablet-p") {
+        max-height: 100%;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &:hover {
+      background-color: rgba(black, 0.5);
+      .post__image--design {
+        background-color: black;
+        opacity: 0.5;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__details {
+    margin-top: 30px;
+    padding-right: 30px;
+    @include breakpoint("to-tablet") {
+      padding-right: 0;
+    }
+  }
+  &__info {
+    margin: 15px 0;
+    display: flex;
+    color: #959595;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+  }
+  &__date {
+    color: #7e7e7e;
+  }
+  &__tags {
+    display: flex;
+  }
+  &__tag {
+    margin-right: 3px;
+    position: relative;
+    text-transform: capitalize;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 3px;
+      @include themify($themes) {
+        color: themed("color-main");
+      }
+    }
+  }
+  &__title {
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 37px;
+    color: #343434;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    @include breakpoint("to-tablet-p") {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    &:hover {
+      @include themify($themes) {
+        color: themed("color-main");
+      }
+    }
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 500;
+    color: #9a9a9a;
+    line-height: 28px;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 15px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    @include breakpoint("to-tablet-p") {
+      align-items: flex-start;
+      flex-direction: column;
+      .post {
+        &__tags {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

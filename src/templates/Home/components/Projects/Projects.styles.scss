@@ -1,0 +1,106 @@
+@import "@styles/utils";
+
+.projects {
+  //  padding:5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    [data-line] {
+      font-size: 20px;
+      color: #3b9fff;
+      position: relative;
+      font-weight: 600;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        background-color: #3b9dff;
+        right: -60px;
+        top: 50%;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        background-color: #3b9dff;
+        left: -60px;
+        top: 50%;
+      }
+    }
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      font-weight: 300;
+      span {
+        font-size: 50px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    z-index: 1;
+  }
+  &__slider {
+    width: 100%;
+    margin-top: 50px;
+    height: 450px;
+
+    .swiper-container {
+      overflow: visible;
+    }
+
+    .swiper-slide {
+      width: 400px;
+      @include breakpoint("phone") {
+        width: 80vw;
+      }
+    }
+  }
+
+  &__details {
+    z-index: 1;
+  }
+
+  &__illustration {
+    position: absolute;
+    left: 7%;
+    top: 8%;
+    z-index: 0;
+    max-width: 50vw;
+    opacity: 0.8;
+  }
+
+  .bullet {
+    background-color: #019aff;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    margin: 0 5px;
+    cursor: pointer;
+    &--active {
+      width: 25px;
+      border-radius: 10px;
+      margin-right: 9px;
+    }
+  }
+}

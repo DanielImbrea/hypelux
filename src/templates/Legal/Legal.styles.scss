@@ -1,0 +1,9 @@
+.legal {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    padding: 0 5%;
+  }
+}

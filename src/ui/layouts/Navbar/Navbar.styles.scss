@@ -1,0 +1,244 @@
+@import "@styles/utils";
+
+.navbar {
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+  height: 80px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  &--is-fixed {
+    position: fixed;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+  }
+  &__logo {
+    color: black;
+    width: 60px;
+  }
+  &__left-side {
+    z-index: 100;
+  }
+  &__right-side {
+    display: flex;
+    z-index: 100;
+  }
+  &__links {
+    display: flex;
+    @include breakpoint("to-tablet-medium") {
+      display: none;
+    }
+  }
+  &__hamburger {
+    display: none;
+    @include breakpoint("to-tablet-medium") {
+      display: block;
+    }
+  }
+  &__link {
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    @include breakpoint("to-laptop-sm") {
+      margin: 0 12px;
+      font-size: 16px;
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: "";
+      color: transparent;
+      background: white;
+      height: 1px;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &--black {
+    .navbar {
+      &__inner {
+        color: black;
+      }
+      &__hamburger {
+        .hamburger-inner {
+          background-color: black;
+
+          &::after,
+          &::before {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+  &--scrolled {
+    background-color: rgba(black, 0.5);
+    height: 90px;
+    @include breakpoint("to-tablet-p") {
+      height: 60px;
+    }
+    .navbar {
+      &__inner {
+        color: white;
+      }
+      &__logo {
+        color: white;
+      }
+      &__hamburger {
+        .hamburger-inner {
+          background-color: white;
+
+          &::after,
+          &::before {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+}
+.hamburger.is-active:hover,
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+  background-color: white;
+}
+.hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 18px;
+}
+.hamburger-inner {
+  top: 50%;
+  display: block;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  position: absolute;
+  width: 35px;
+  height: 3px;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  border-radius: 4px;
+  background-color: white;
+}
+.hamburger-inner:after,
+.hamburger-inner:before {
+  display: block;
+  content: "";
+}
+.hamburger-inner:before {
+  top: -10px;
+}
+.hamburger-inner:after {
+  bottom: -10px;
+}
+
+.hamburger--spin .hamburger-inner {
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition-duration: 0.22s;
+}
+.hamburger--spin .hamburger-inner:before {
+  transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner:after {
+  transition: bottom 0.1s ease-in 0.25s,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin.is-active .hamburger-inner {
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(225deg);
+}
+.hamburger--spin.is-active .hamburger-inner:before {
+  top: 0;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+  opacity: 0;
+}
+.hamburger--spin.is-active .hamburger-inner:after {
+  bottom: 0;
+  transition: bottom 0.1s ease-out,
+    transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transform: rotate(-90deg);
+}
+.hamburger--spin-r .hamburger-inner {
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition-duration: 0.22s;
+}
+.hamburger--spin-r .hamburger-inner:before {
+  transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+}
+.hamburger--spin-r .hamburger-inner:after {
+  transition: bottom 0.1s ease-in 0.25s,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin-r.is-active .hamburger-inner {
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(-225deg);
+}
+.hamburger--spin-r.is-active .hamburger-inner:before {
+  top: 0;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+  opacity: 0;
+}
+.hamburger--spin-r.is-active .hamburger-inner:after {
+  bottom: 0;
+  transition: bottom 0.1s ease-out,
+    transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transform: rotate(90deg);
+}

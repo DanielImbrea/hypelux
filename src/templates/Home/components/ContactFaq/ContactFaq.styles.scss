@@ -1,0 +1,134 @@
+@import "@styles/utils";
+
+.contact {
+  position: relative;
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5%;
+    @include breakpoint("to-tablet") {
+      flex-direction: column-reverse;
+      margin-top: 50px;
+    }
+  }
+  &__particle {
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    @include breakpoint("phone") {
+      display: none;
+    }
+  }
+  &__bg-illustration {
+    position: absolute;
+    left: 0;
+    .inner-path {
+      animation: contactBgIllustration 12s infinite ease-in-out;
+    }
+    .outer-path {
+      animation: contact2BgIllustration 12s infinite ease-in-out;
+    }
+    @include breakpoint("to-tablet") {
+      width: 60%;
+    }
+    @include breakpoint("phone") {
+      display: none;
+    }
+  }
+  &__left-side {
+    width: 70%;
+    z-index: 10;
+    @include breakpoint("to-tablet") {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+  .accordion {
+    border: none;
+  }
+  &__faq {
+    width: 50%;
+    z-index: 10;
+
+    @include breakpoint("to-tablet") {
+      width: 90%;
+      margin-top: 50px;
+    }
+  }
+}
+
+.collapse-item {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    color: #7c7c7c;
+    border-bottom: 1px solid rgba(#9f9f9f, 0.2);
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+  }
+  &__description {
+    font-size: 18px;
+    color: #7c7c7c;
+    padding: 5px 0 !important;
+  }
+}
+
+.contact__left-side {
+  @include breakpoint("to-tablet") {
+    height: auto;
+  }
+}
+.contact-form.input-fields {
+  @include breakpoint("to-tablet") {
+    height: auto;
+  }
+}
+
+.accordion {
+  @include breakpoint("to-tablet") {
+    margin-top: 25px;
+  }
+}
+
+@keyframes contactBgIllustration {
+  0% {
+    d: path(
+      "M333.371 578.71C137.377 439.726 23.6829 491.085 -16.3935 578.71L-16.3933 115.127C-22.6274 117.495 11.3283 52.7555 261.469 29.8694C583.23 0.430691 759.567 229.015 759.567 347.025C759.567 550.162 657.969 808.892 333.371 578.71Z"
+    );
+  }
+  50% {
+    d: path(
+      "M333.371 599.71C132.052 468.559 23.683 533.798 -16.3934 621.423L-16.393 136.127C-22.627 138.495 41.0156 25.6866 291.157 2.80053C612.917 -26.6382 741.063 256.59 741.063 374.599C741.063 577.736 616.089 783.89 333.371 599.71Z"
+    );
+  }
+  100% {
+    d: path(
+      "M333.371 578.71C137.377 439.726 23.6829 491.085 -16.3935 578.71L-16.3933 115.127C-22.6274 117.495 11.3283 52.7555 261.469 29.8694C583.23 0.430691 759.567 229.015 759.567 347.025C759.567 550.162 657.969 808.892 333.371 578.71Z"
+    );
+  }
+}
+
+@keyframes contact2BgIllustration {
+  0% {
+    d: path(
+      "M312.871 599.864c-212.905-150.976-336.41-95.186-379.943 0V96.281c-6.772 2.573 30.113-67.753 301.837-92.614C584.288-28.31 775.841 219.996 775.841 348.188c0 220.664-110.365 501.719-462.97 251.676z"
+    );
+  }
+  50% {
+    d: path(
+      "M312.871 620.865C75.8035 511.681 -23.538 507.492 -67.0723 602.678V92.398C-73.8442 94.9706 -36.9588 49.529 234.765 24.6682C584.288 -7.31054 775.841 240.997 775.841 369.189C775.841 589.853 677.014 788.576 312.871 620.865Z"
+    );
+  }
+
+  100% {
+    d: path(
+      "M312.871 599.864c-212.905-150.976-336.41-95.186-379.943 0V96.281c-6.772 2.573 30.113-67.753 301.837-92.614C584.288-28.31 775.841 219.996 775.841 348.188c0 220.664-110.365 501.719-462.97 251.676z"
+    );
+  }
+}

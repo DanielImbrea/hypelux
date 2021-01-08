@@ -1,0 +1,53 @@
+@import "@styles/utils";
+
+.advantage-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 30px 20px;
+  max-height: 300px;
+  height: 100%;
+  max-width: 250px;
+  width: 100%;
+  z-index: 1;
+  border-radius: 15px;
+  border: 1px solid #efefef;
+  @include breakpoint("to-tablet-p") {
+    width: 100%;
+    max-width: 300px;
+    max-height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+  }
+  &:nth-child(2n) {
+    margin-top: -80px;
+    @include breakpoint("to-tablet-p") {
+      margin-top: 0;
+    }
+  }
+  &__icon {
+    height: 90px;
+    width: 90px;
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__title {
+    color: #727272;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+  &__description {
+    color: #969696;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+  }
+}

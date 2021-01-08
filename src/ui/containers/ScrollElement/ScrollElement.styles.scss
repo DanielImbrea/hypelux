@@ -1,0 +1,24 @@
+@import "@styles/utils";
+
+.scroll-element {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 25px;
+  height: 50px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  @include breakpoint("to-tablet-p") {
+    display: none;
+  }
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}

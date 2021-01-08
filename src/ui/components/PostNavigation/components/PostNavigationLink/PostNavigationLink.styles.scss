@@ -1,0 +1,54 @@
+@import "@styles/utils";
+
+.post-navigation-link {
+  display: flex;
+  flex-direction: column;
+  &__type {
+    letter-spacing: 2px;
+    color: rgb(202, 202, 202);
+    display: inline-block;
+    font-size: 14px;
+    padding-bottom: 0.2rem;
+    text-transform: uppercase;
+    @include breakpoint("to-tablet-p") {
+      font-size: 12px;
+      padding-bottom: 3px;
+    }
+  }
+  &__post-title {
+    margin: 10px 0;
+    @include breakpoint("to-tablet-p") {
+      margin-top: 0px;
+    }
+    a {
+      display: block;
+      clear: both;
+      float: left;
+      max-width: 300px;
+      width: 100%;
+      margin-bottom: 1em;
+      line-height: 1.2;
+      font-weight: 600;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      color: #333;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      @include breakpoint("to-tablet-p") {
+        font-size: 1.2rem;
+      }
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+  &--next {
+    .post-navigation-link__type {
+      text-align: right;
+    }
+    .post-navigation-link__post-title {
+      text-align: right;
+    }
+  }
+}

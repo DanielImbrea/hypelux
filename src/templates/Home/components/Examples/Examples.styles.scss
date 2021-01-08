@@ -1,0 +1,169 @@
+@import "@styles/utils";
+
+.examples {
+  position: relative;
+  margin-bottom: 200px;
+  margin-top: 100px;
+  @include breakpoint("to-tablet-p") {
+    margin-top: 180px;
+  }
+  &__inner {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    @include breakpoint("to-tablet-p") {
+      padding: 80px 20px;
+      align-items: flex-end;
+    }
+  }
+  &__particle-1 {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    path {
+      animation: particle1Animation 10s infinite ease-in-out;
+    }
+  }
+  &__particle-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    path {
+      animation: particle2Animation 10s infinite ease-in-out;
+    }
+  }
+  &__particle-3 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    * {
+      fill: white;
+    }
+  }
+  &__particle-4 {
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    animation-delay: 1s;
+    * {
+      fill: white;
+    }
+  }
+  &__particle-5 {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    opacity: 0.4;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    * {
+      fill: white;
+    }
+  }
+  &__details {
+    width: 50%;
+    @include breakpoint("to-tablet-p") {
+      width: 100%;
+      margin-top: 50%;
+    }
+  }
+  &__bg-illustration {
+    width: 100vw;
+    @include breakpoint("to-tablet-p") {
+      height: 100%;
+      min-height: 100vh;
+    }
+  }
+  &__images {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    width: 110%;
+    max-width: 60%;
+    @include breakpoint("to-tablet-p") {
+      max-height: 800px;
+      height: 100%;
+      max-width: 70vw;
+    }
+    @include breakpoint("phone") {
+      max-height: none;
+      max-width: 90vw;
+      height: auto;
+    }
+
+    .gatsby-image-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .section-details {
+    @include breakpoint("to-tablet") {
+      &__description {
+        font-size: 24px;
+        width: 100%;
+      }
+    }
+    @include breakpoint("to-tablet-p") {
+      &__description {
+        font-size: 18px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes particle1Animation {
+  0% {
+    d: path(
+      "M71.8041 195.921C159.863 291.986 96.3252 395.059 0.705773 481.227L0.705583 609.646C108.555 504.576 275.888 301.107 192.499 212.715L0.705583 0.907227L0.70459 90.4113C5.152 94.3027 -16.2547 99.857 71.8041 195.921Z"
+    );
+  }
+  50% {
+    d: path(
+      "M101.249 227.396C189.307 323.461 96.3252 395.059 0.705773 481.227L0.705583 609.646C108.555 504.576 324.752 330.003 241.363 241.611L0.705583 0.907227L0.70459 90.4113C5.152 94.3027 13.1897 131.332 101.249 227.396Z"
+    );
+  }
+  100% {
+    d: path(
+      "M71.8041 195.921C159.863 291.986 96.3252 395.059 0.705773 481.227L0.705583 609.646C108.555 504.576 275.888 301.107 192.499 212.715L0.705583 0.907227L0.70459 90.4113C5.152 94.3027 -16.2547 99.857 71.8041 195.921Z"
+    );
+  }
+}
+
+@keyframes particle2Animation {
+  0% {
+    d: path(
+      "M.816 80.33c88.516 95.643 168.251 162.16 73.044 248.783l58.284 2.699c107.347-105.584 10.499-209.8-96.8-298.673L.817 1.54.816 80.33z"
+    );
+  }
+  50% {
+    d: path(
+      "M0.815276 92.3266C89.3317 187.97 143.908 146.913 73.8599 341.11L132.144 343.808C258.639 166.201 158.122 100.212 36.2831 25.0742L0.81555 0.705919L0.815276 92.3266Z"
+    );
+  }
+  100% {
+    d: path(
+      "M.816 80.33c88.516 95.643 168.251 162.16 73.044 248.783l58.284 2.699c107.347-105.584 10.499-209.8-96.8-298.673L.817 1.54.816 80.33z"
+    );
+  }
+}

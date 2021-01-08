@@ -1,0 +1,169 @@
+@import "@styles/utils";
+
+.header {
+  padding: 0 5%;
+  display: flex;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+
+  @include breakpoint("to-tablet-p") {
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+  &__particle-1 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 1;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    rect {
+      fill: white;
+    }
+  }
+  &__particle-2 {
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+    z-index: 1;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    rect {
+      fill: white;
+    }
+  }
+  &__particle-3 {
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    z-index: 1;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    rect {
+      fill: white;
+    }
+  }
+  &__particle-4 {
+    position: absolute;
+    top: 12%;
+    right: 2%;
+    z-index: 1;
+    @include breakpoint("phone") {
+      display: none;
+    }
+    rect {
+      fill: white;
+    }
+  }
+  &__background-illustration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: auto;
+    .inner-path {
+      animation: header2BgIllustration 15s infinite ease-in-out;
+    }
+    .outer-path {
+      animation: headerBgIllustration 15s infinite ease-in-out;
+    }
+    @include breakpoint("desktop") {
+      width: 65vw;
+    }
+    @include breakpoint("to-tablet-p") {
+      width: 90vw;
+    }
+    @include breakpoint("phone") {
+      width: 110vw;
+    }
+  }
+  &__left-side {
+    z-index: 1;
+  }
+  &__illustration {
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    @include breakpoint("to-tablet") {
+      max-width: 40vw;
+      max-height: 400px;
+      left: 70%;
+    }
+    @include breakpoint("to-tablet-p") {
+      max-width: 80vw;
+      max-height: 400px;
+      position: relative;
+      left: 0;
+      transform: none;
+      z-index: 10;
+    }
+    @include breakpoint("phone") {
+      max-height: 300px;
+    }
+  }
+  &__details {
+    width: 80%;
+    max-width: 600px;
+    @include breakpoint("to-tablet-p") {
+      width: 100%;
+    }
+    .title {
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 15px;
+      // margin-top: 10px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    > button {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@keyframes headerBgIllustration {
+  0% {
+    d: path(
+      "M14.542 137.431C-29.13 80.571 42.01 18.605 78.403.023H985.93c.833 224.585.008 658.212.008 662.1-132.298 14.4-310.229 144.58-434.329-43.329-60.615-91.781-160.948-75.731-249.474-123.114-88.527-47.383-24.56-150.139-65.873-244.905-41.312-94.767-167.128-42.269-221.719-113.344z"
+    );
+  }
+  50% {
+    d: path(
+      "M54.3176 175.246C10.6446 118.386 -19.9908 18.6049 16.4034 0.0234375H923.929C924.762 224.608 923.937 658.235 923.937 662.123C791.639 676.523 726.719 861.944 602.618 674.034C542.003 582.254 394.072 559.128 305.546 511.745C217.019 464.362 242.333 389.208 201.02 294.442C159.707 199.676 108.909 246.321 54.3176 175.246Z"
+    );
+  }
+  100% {
+    d: path(
+      "M14.542 137.431C-29.13 80.571 42.01 18.605 78.403.023H985.93c.833 224.585.008 658.212.008 662.1-132.298 14.4-310.229 144.58-434.329-43.329-60.615-91.781-160.948-75.731-249.474-123.114-88.527-47.383-24.56-150.139-65.873-244.905-41.312-94.767-167.128-42.269-221.719-113.344z"
+    );
+  }
+}
+
+@keyframes header2BgIllustration {
+  0% {
+    d: path(
+      "M75.26 131.732C33.775 75.482 91.144 17.762 125.715-.621l860.157.66c1.869 221.968-.064 658.212-.064 654.514-125.671 14.246-292.711 142.86-410.594-43.035-57.578-90.797-152.885-74.92-236.977-121.795-84.092-46.875-23.329-148.53-62.572-242.28-39.243-93.751-148.548-45.398-200.405-115.711z"
+    );
+  }
+  50% {
+    d: path(
+      "M73.5721 148.656C32.087 92.4058 29.1439 17.7613 63.7149 -0.621094L923.872 0.0389313C925.741 222.007 923.808 658.251 923.808 654.553C798.137 668.799 719.584 835.174 601.701 649.278C544.123 558.481 446.484 563.205 362.392 516.329C278.3 469.454 249.551 429.423 232.194 329.284C208.355 191.75 125.429 218.969 73.5721 148.656Z"
+    );
+  }
+  100% {
+    d: path(
+      "M75.26 131.732C33.775 75.482 91.144 17.762 125.715-.621l860.157.66c1.869 221.968-.064 658.212-.064 654.514-125.671 14.246-292.711 142.86-410.594-43.035-57.578-90.797-152.885-74.92-236.977-121.795-84.092-46.875-23.329-148.53-62.572-242.28-39.243-93.751-148.548-45.398-200.405-115.711z"
+    );
+  }
+}

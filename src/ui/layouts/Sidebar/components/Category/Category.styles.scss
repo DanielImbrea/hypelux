@@ -1,0 +1,39 @@
+@import "@styles/utils";
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 11px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    .category__name {
+      color: $color-main;
+    }
+  }
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #6d6d6d;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  &__number {
+    float: right;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    min-width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 100%;
+    margin-top: -2px;
+    font-size: 18px;
+    background-color: $color-main;
+  }
+}

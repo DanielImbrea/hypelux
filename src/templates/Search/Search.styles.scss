@@ -1,0 +1,29 @@
+.search {
+  .search-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-top: 80px;
+    &__icon {
+      margin-left: -40px;
+      color: rgba(black, 0.3);
+    }
+    input {
+      border-radius: 10px;
+      border: 1px solid rgba(black, 0.1);
+      height: 100%;
+      width: 100%;
+      outline: none;
+      padding: 10px 15px;
+      font-family: Poppins, sans-serif;
+      font-weight: bold;
+      font-size: 1.6rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      &::placeholder {
+        color: rgba(black, 0.3);
+      }
+    }
+  }
+}

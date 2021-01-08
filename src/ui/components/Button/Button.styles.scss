@@ -1,0 +1,45 @@
+@import "@styles/utils";
+
+.button {
+  background-color: $color-main;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 120px;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transition: all 0.3s ease-in-out;
+    margin-left: 10px;
+    fill: white;
+  }
+  &:hover {
+    background-color: transparent;
+    border: 2px solid $color-main;
+    color: $color-main;
+    svg {
+      color: $color-main;
+      fill: $color-main;
+    }
+  }
+  &--outline {
+    background-color: transparent;
+    border: 2px solid #73c0fe;
+    color: #73c0fe;
+
+    &:hover {
+      background-color: #73c0fe;
+      border: 2px solid #73c0fe;
+      color: white;
+    }
+  }
+}

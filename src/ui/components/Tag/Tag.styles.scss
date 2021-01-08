@@ -1,0 +1,26 @@
+@import "@styles/utils";
+
+.tag {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 5px 10px;
+  line-height: 22px;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.54);
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #eaeaea;
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  @include breakpoint("to-tablet-p") {
+    font-size: 1.2rem;
+  }
+}

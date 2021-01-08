@@ -1,0 +1,17 @@
+@import "@styles/utils";
+
+.sidebar {
+  margin-top: 80px;
+  min-width: 350px;
+  @include breakpoint("to-tablet-p") {
+    min-width: 100%;
+  }
+  &__inner {
+    > div {
+      margin: 40px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

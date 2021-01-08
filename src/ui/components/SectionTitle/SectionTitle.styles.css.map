@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,cAAc,EAAE,IAAI;EACpB,SAAS,EAAE,IAAI;CAKhB;;AAPD,AAGE,cAHY,CAGZ,IAAI,CAAC;EACH,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CACjB",
+    "sources": [
+        "SectionTitle.styles.scss"
+    ],
+    "names": [],
+    "file": "SectionTitle.styles.css"
+}

@@ -1,0 +1,167 @@
+@import "@styles/utils";
+
+.testimonials {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  margin: 200px 0;
+  padding-left: 5%;
+  @include breakpoint("to-tablet-p") {
+    padding-left: 0;
+  }
+  @include breakpoint("to-tablet-p") {
+    padding: 0;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  &__illustration {
+    position: absolute;
+    top: -150px;
+    opacity: 0.6;
+    left: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include breakpoint("to-tablet-p") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+    margin-top: 40px;
+    @include breakpoint("to-tablet-p") {
+      width: 100%;
+      justify-content: center;
+    }
+    .bullet {
+      background-color: #019aff;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      margin: 0 5px;
+      cursor: pointer;
+      &--active {
+        width: 25px;
+        border-radius: 10px;
+        margin-right: 9px;
+      }
+    }
+  }
+
+  &__bg-illustration {
+    position: absolute;
+    right: 0;
+    top: -100px;
+    .inner-path {
+      animation: testimonialsBgIllustration 18s infinite ease-in-out;
+    }
+    .outer-path {
+      animation: testimonials2BgIllustration 18s infinite ease-in-out;
+    }
+    @include breakpoint("to-tablet") {
+      width: 50%;
+    }
+  }
+  &__right-side {
+    > svg {
+      @include breakpoint("to-tablet-p") {
+        display: none;
+      }
+    }
+    .testimonials__slider {
+      @include breakpoint("to-tablet-p") {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+      }
+    }
+  }
+  .testimonials__right-side {
+    @include breakpoint("to-tablet-p") {
+      width: 100%;
+    }
+  }
+  &__left-side,
+  &__right-side {
+    width: 50%;
+    @include breakpoint("to-tablet-p") {
+      width: 100%;
+    }
+  }
+  &__slider {
+    @include breakpoint("to-tablet-p") {
+      margin-top: 40px;
+    }
+  }
+  .swiper-slide {
+    width: 301px;
+  }
+  .testimonial {
+    width: 301px;
+    height: 330px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 17px;
+    &__description {
+      @include breakpoint("to-tablet-p") {
+        width: 100%;
+        padding: 25px 0;
+      }
+    }
+  }
+}
+.testimonials .testimonial {
+  @include breakpoint("to-tablet-p") {
+    height: auto;
+  }
+}
+
+@keyframes testimonialsBgIllustration {
+  0% {
+    d: path(
+      "M425.666 115.075C613.805 248.489 722.943 199.189 761.414 115.075L761.413 560.08C767.398 557.807 734.803 619.952 494.686 641.921C185.82 670.18 16.5493 450.756 16.5493 337.475C16.5493 142.479 114.076 -105.882 425.666 115.075Z"
+    );
+  }
+  50% {
+    d: path(
+      "M400.569 84.316C604.941 229.242 729.868 91.5554 771.657 0.183533L789.071 566.176C771.654 482.445 760.164 631.214 499.329 655.079C163.813 685.776 0.938049 521.367 0.938049 398.313C0.938049 186.491 62.0938 -155.706 400.569 84.316Z"
+    );
+  }
+  100% {
+    d: path(
+      "M425.666 115.075C613.805 248.489 722.943 199.189 761.414 115.075L761.413 560.08C767.398 557.807 734.803 619.952 494.686 641.921C185.82 670.18 16.5493 450.756 16.5493 337.475C16.5493 142.479 114.076 -105.882 425.666 115.075Z"
+    );
+  }
+}
+
+@keyframes testimonials2BgIllustration {
+  0% {
+    d: path(
+      "M414.09 118.871C616.91 222.534 701.949 187.189 740.42 103.075L740.419 548.081C746.404 545.807 703.785 624.234 463.668 646.203C154.802 674.462 20.4689 481.544 20.4689 368.264C20.4689 173.268 73.96 -54.9728 414.09 118.871Z"
+    );
+  }
+  50% {
+    d: path(
+      "M445.348 94.774C649.72 239.7 768.275 186.146 810.065 94.774L810.065 578.176C816.565 575.707 781.158 643.214 520.323 667.078C184.808 697.776 0.931335 459.419 0.931335 336.364C0.931335 124.543 106.873 -145.248 445.348 94.774Z"
+    );
+  }
+
+  100% {
+    d: path(
+      "M414.09 118.871C616.91 222.534 701.949 187.189 740.42 103.075L740.419 548.081C746.404 545.807 703.785 624.234 463.668 646.203C154.802 674.462 20.4689 481.544 20.4689 368.264C20.4689 173.268 73.96 -54.9728 414.09 118.871Z"
+    );
+  }
+}

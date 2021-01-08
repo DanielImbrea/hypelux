@@ -1,0 +1,19 @@
+.post-share {
+  display: flex;
+  align-items: center;
+  &__item {
+    margin-right: 15px;
+    font-size: 2.6rem;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-right: 0;
+    }
+    svg {
+      fill: #a8a8a8;
+      &:hover {
+        fill: #838383;
+      }
+    }
+  }
+}

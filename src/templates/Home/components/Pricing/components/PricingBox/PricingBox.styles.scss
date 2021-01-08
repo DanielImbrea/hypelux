@@ -1,0 +1,109 @@
+@import "@styles/utils";
+
+.pricing-box {
+  width: 437px;
+  min-height: 650px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 44px;
+  padding: 80px 0;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+  @include breakpoint("to-tablet") {
+    padding: 30px 0;
+    width: 30%;
+    min-height: auto;
+  }
+  @include breakpoint("to-tablet-p") {
+    text-align: center;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0;
+    width: 100%;
+    min-height: unset;
+    padding: 50px 0;
+  }
+
+  &:first-child {
+    margin-right: -40px;
+    @include breakpoint("to-tablet") {
+      margin-right: -100px;
+    }
+
+    @include breakpoint("to-tablet-p") {
+      margin: 0;
+      margin-top: 50px;
+    }
+  }
+  &:last-child {
+    margin-left: -40px;
+    @include breakpoint("to-tablet") {
+      margin-left: -100px;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint("to-tablet-p") {
+      margin: 0;
+    }
+  }
+  &--main {
+    padding: 120px 0;
+    z-index: 3;
+
+    @include breakpoint("to-tablet") {
+      padding: 50px 0;
+    }
+
+    @include breakpoint("to-tablet-p") {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 3%;
+  }
+  &__price {
+    color: #00c6ff;
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3%;
+    font-weight: 500;
+    @include breakpoint("to-tablet-p") {
+      font-size: 50px;
+      padding-bottom: 1%;
+    }
+  }
+  button {
+    margin-top: 10%;
+    @include breakpoint("to-tablet-p") {
+      margin-top: 10px;
+      width: 160px;
+      padding: 14px;
+      font-size: 12px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    margin: 10px 0;
+    &__illustration {
+      display: flex;
+      align-items: center;
+    }
+    &__text {
+      font-size: 22px;
+      color: #667787;
+      margin-left: 10px;
+      @include breakpoint("to-tablet-p") {
+        font-size: 18px;
+      }
+    }
+  }
+}

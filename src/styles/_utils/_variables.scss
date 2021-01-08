@@ -1,0 +1,335 @@
+//font variables
+$font-main: "Roboto Condensed", sans-serif;
+$base-font-size: 62.5%;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-page-bg: white;
+
+$color-main: #13b0e5;
+$color-main-light: #73c0fe;
+
+$themes: (
+  blue: (
+    color-main: #1a7ece,
+    color-main-light: #73c0fe,
+    color-gradient: transparent
+      linear-gradient(to right, #13b0e5 0%, #1a7ece 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #13b0e5, #1a7ece),
+    background-primary-color: #008eff,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #008eff,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #9ccff7,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #008eff,
+  ),
+  red: (
+    color-main: #ff4d4d,
+    color-main-light: #ff4d4d,
+    color-gradient: transparent
+      linear-gradient(to right, #ff7171 0%, #ff3838 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #ff7171, #ff3838),
+    background-primary-color: #ff3838,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #ff3838,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #ff3838,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #ff3838,
+  ),
+  green: (
+    color-main: #27ae60,
+    color-main-light: #27ae60,
+    color-gradient: transparent
+      linear-gradient(to right, #4cd137 0%, #27ae60 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #4cd137, #27ae60),
+    background-primary-color: #4cd137,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #4cd137,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #05c46b,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #05c46b,
+  ),
+  purple: (
+    color-main: #8854d0,
+    color-main-light: #8854d0,
+    color-gradient: transparent
+      linear-gradient(to right, #d980fa 0%, #8854d0 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #d980fa, #8854d0),
+    background-primary-color: #a55eea,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #a55eea,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #a55eea,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #a55eea,
+  ),
+  orange: (
+    color-main: #f79f1f,
+    color-main-light: #f79f1f,
+    color-gradient: transparent
+      linear-gradient(to right, #f79f1f 0%, #ee5a24 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #f79f1f, #ee5a24),
+    background-primary-color: #f79f1f,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #f79f1f,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #ee5a24,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #ee5a24,
+  ),
+  yellow: (
+    color-main: #ffc312,
+    color-main-light: #ffc312,
+    color-gradient: transparent
+      linear-gradient(to right, #ffc312 0%, #e1b12c 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #ffc312, #e1b12c),
+    background-primary-color: #ffc312,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #ffc312,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #ffc312,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #ffc312,
+  ),
+  pink: (
+    color-main: #fd79a8,
+    color-main-light: #fd79a8,
+    color-gradient: transparent
+      linear-gradient(to right, #ff7675 0%, #fd79a8 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #ff7675, #fd79a8),
+    background-primary-color: #fd79a8,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #fd79a8,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #fd79a8,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #fd79a8,
+  ),
+  black: (
+    color-main: #2f3640,
+    color-main-light: #2f3640,
+    color-gradient: transparent
+      linear-gradient(to right, #718093 0%, #555555 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #718093, #555555),
+    background-primary-color: #353b48,
+    background-primary-opacity: 0.162,
+    background-secondary-color: #353b48,
+    background-secondary-opacity: 0.465,
+    background-circles-color: #353b48,
+    background-circles-opacity: 0.9,
+    contact-illustration-color: #353b48,
+  ),
+  blue-purple-gradient: (
+    color-main: #1a7ece,
+    color-main-light: #1a7ece,
+    color-gradient: transparent
+      linear-gradient(to right, #1a7ece 0%, #8854d0 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #1a7ece, #8854d0),
+    background-primary-color: #0984e3,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #5f27cd,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #a295ff,
+    background-circles-opacity: 0,
+    contact-illustration-color: #1a7ece,
+  ),
+  red-purple-gradient: (
+    color-main: #fd79a8,
+    color-main-light: #fd79a8,
+    color-gradient: transparent
+      linear-gradient(to right, #fd79a8 0%, #8854d0 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #fd79a8, #8854d0),
+    background-primary-color: #fd79a8,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #5f27cd,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #a295ff,
+    background-circles-opacity: 0,
+    contact-illustration-color: #fd79a8,
+  ),
+  purple-gradient: (
+    color-main: #8e2de2,
+    color-main-light: #8e2de2,
+    color-gradient: transparent
+      linear-gradient(to right, #8e2de2 0%, #4a00e0 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #8e2de2, #4a00e0),
+    background-primary-color: #8e2de2,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #5f27cd,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #4a00e0,
+    background-circles-opacity: 0,
+    contact-illustration-color: #8e2de2,
+  ),
+  light-blue-gradient: (
+    color-main: #4facfe,
+    color-main-light: #4facfe,
+    color-gradient: transparent
+      linear-gradient(to right, #4facfe 0%, #00f2fe 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #4facfe, #00f2fe),
+    background-primary-color: #4facfe,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #00f2fe,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #00f2fe,
+    background-circles-opacity: 0,
+    contact-illustration-color: #4facfe,
+  ),
+  light-green-gradient: (
+    color-main: #009732,
+    color-main-light: #009732,
+    color-gradient: transparent
+      linear-gradient(to right, #43e97b 0%, #38f9d7 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #43e97b, #38f9d7),
+    background-primary-color: #43e97b,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #38f9d7,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #38f9d7,
+    background-circles-opacity: 0,
+    contact-illustration-color: #009732,
+  ),
+  green-blue-gradient: (
+    color-main: #009efd,
+    color-main-light: #009efd,
+    color-gradient: transparent
+      linear-gradient(to right, #2af598 0%, #009efd 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #2af598, #009efd),
+    background-primary-color: #2af598,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #009efd,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #009efd,
+    background-circles-opacity: 0,
+    contact-illustration-color: #009efd,
+  ),
+  orange-gradient: (
+    color-main: #fc6076,
+    color-main-light: #fc6076,
+    color-gradient: transparent
+      linear-gradient(to right, #ff9a44 0%, #fc6076 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #ff9a44, #fc6076),
+    background-primary-color: #ff9a44,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #fc6076,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #fc6076,
+    background-circles-opacity: 0,
+    contact-illustration-color: #fc6076,
+  ),
+  orange-red-gradient: (
+    color-main: #dd5e89,
+    color-main-light: #dd5e89,
+    color-gradient: transparent
+      linear-gradient(to right, #f7bb97 0%, #dd5e89 100%) 0% 0%
+      no-repeat padding-box,
+    color-gradient-border: linear-gradient(90deg, #f7bb97, #dd5e89),
+    background-primary-color: #f7bb97,
+    background-primary-opacity: 0.262,
+    background-secondary-color: #dd5e89,
+    background-secondary-opacity: 0.665,
+    background-circles-color: #dd5e89,
+    background-circles-opacity: 0.3,
+    contact-illustration-color: #dd5e89,
+  ),
+);
+
+$color-gradient-1: #13b0e5;
+$color-gradient-2: #1a7ece;
+
+$color-gradient: transparent
+  linear-gradient(
+    to right,
+    $color-gradient-1 0%,
+    $color-gradient-2 100%
+  )
+  0% 0% no-repeat padding-box;
+
+$color-text: #070f18;
+$color-text-secondary: #4d5a68;
+$color-text-header: #362b27;
+$color-gray: #c0bcbc;
+
+$color-input-bg: #ebebeb;
+$color-label: #4d5a68;
+$color-footer-icon: #c9ccd4;
+
+$color-hover: rgba(#e1e1e1, 0.7);
+$color-placeholder: #969292;
+
+$color-divider: #ece7e3;
+$color-career-border: #e3e3e3;
+
+$color-ebony: #060c13;
+$color-zoom_bg: #333643;
+
+$color-instruction: #070f18;
+
+$color-scrollbar: #555555;
+
+$color-error: #8b0000;
+$color-success: #4caf50;
+$color-warning: #ffa000;
+$color-tooltip-bg: rgba(black, 0.95);
+
+$gutter: 20px;
+
+//z-index
+$z-1: 1;
+$z-2: 2;
+$z-3: 3;
+$z-4: 4;
+$z-5: 5;
+$z-6: 6;
+$z-7: 7;
+$z-8: 8;
+$z-9: 9;
+$z-10: 10; //card actions
+$z-11: 11; //sidebar, static header
+$z-12: 12; //full-width dialog
+$z-13: 13;
+$z-14: 14; //dialog
+$z-15: 15; //notifications
+$z-16: 16; //notifications
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}

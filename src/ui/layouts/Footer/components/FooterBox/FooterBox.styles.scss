@@ -1,0 +1,27 @@
+@import "@styles/utils";
+
+.footer-box {
+  margin: 0 40px;
+  @include breakpoint("to-tablet-p") {
+    margin: 20px 0;
+  }
+  &:last-child {
+    margin-right: 0;
+    @include breakpoint("to-tablet") {
+      margin: 0 40px;
+    }
+    @include breakpoint("to-tablet-p") {
+      margin: 20px 0;
+    }
+  }
+  &__title {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+}
