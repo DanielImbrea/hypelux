@@ -4,11 +4,17 @@
   z-index: 10;
   min-height: 600px;
   position: relative;
-
   overflow: hidden;
 
   &__inner {
-    height: 100%;
+    height: 40%;
+    height: 300px;
+    @include breakpoint("to-tablet") {
+      height: 100%;
+    }
+    @include breakpoint("phone") {
+      height: 100%;
+    }
   }
   &__link {
     color: white;
@@ -30,7 +36,6 @@
     display: flex;
     flex-direction: column;
     padding: 5%;
-    padding-top: 10%;
   }
   &__bg {
     width: 100%;
@@ -42,7 +47,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    padding-bottom: 50px;
+    @include breakpoint("phone") {
+      padding-bottom: 0;
+    }
     * {
       color: white;
     }
@@ -54,7 +62,7 @@
 
   &__input {
     position: relative;
-    margin-top: 70px;
+    margin-top: 40px;
 
     @include breakpoint("to-tablet-p") {
       margin-top: 10px;
@@ -70,6 +78,10 @@
       outline: none;
       font-size: 30px;
       color: #959595;
+      @include breakpoint("phone") {
+        height: 40px;
+        font-size: 24px;
+      }
       @include breakpoint("to-tablet-p") {
         width: 100%;
       }
@@ -92,6 +104,7 @@
     display: flex;
     justify-content: space-between;
     flex: 1;
+
     @include breakpoint("to-tablet-p") {
       flex-direction: column;
       height: auto;
@@ -112,9 +125,11 @@
   }
   &__contact {
     z-index: 1;
+    font-weight: 600;
+    margin-top: 5px;
     p {
-      font-size: 14px;
-      color: #e9e9e9;
+      font-size: 16px;
+      color: white;
       margin: 1px;
       @include breakpoint("to-tablet-p") {
         text-align: center;
@@ -145,20 +160,38 @@
     position: relative;
   }
   &__icon {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    cursor: pointer;
     &-container {
       margin: 10px;
-      height: 40px;
-      width: 40px;
+      height: 42px;
+      width: 42px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       &:first-child {
         margin-left: 0;
+        margin-bottom: -1px;
       }
+
+      &:nth-child(2) {
+        margin-top: 25px;
+      }
+
+      &:last-child {
+        margin-bottom: -4px;
+        margin-left: 5px;
+      }
+
       &--active {
         background-color: #00c6ff;
+        &:hover {
+          background: white;
+          stroke: black;
+          color: black;
+          fill: black;
+        }
       }
     }
   }

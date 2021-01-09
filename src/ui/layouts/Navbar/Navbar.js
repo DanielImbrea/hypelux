@@ -119,14 +119,14 @@ const Navbar = ({ color, isFixed = true }) => {
               >
                 About us
               </div>
-              <div
+              {/* <div
                 className="navbar__link"
                 onClick={handleScroll}
                 data-section="solutions"
               >
                 Solutions
-              </div>
-              <div
+              </div> */}
+              {/* <div
                 className="navbar__link"
                 onClick={handleScroll}
                 data-section="projects"
@@ -146,7 +146,7 @@ const Navbar = ({ color, isFixed = true }) => {
                 data-section="testimonials"
               >
                 Testimonials
-              </div>
+              </div> */}
               <div
                 className="navbar__link"
                 onClick={handleScroll}
