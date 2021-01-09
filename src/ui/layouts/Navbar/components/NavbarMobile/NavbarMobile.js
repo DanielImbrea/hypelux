@@ -39,14 +39,14 @@ const NavbarMobile = ({ isVisible, setIsMenuActive }) => {
           >
             About us
           </div>
-          <div
+          {/* <div
             className="navbar-mobile__link"
             onClick={handleScroll}
             data-section="solutions"
           >
             Solutions
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className="navbar-mobile__link"
             onClick={handleScroll}
             data-section="projects"
@@ -59,14 +59,14 @@ const NavbarMobile = ({ isVisible, setIsMenuActive }) => {
             data-section="pricing"
           >
             Pricing
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className="navbar-mobile__link"
             onClick={handleScroll}
             data-section="testimonials"
           >
             Testimonials
-          </div>
+          </div> */}
           <div
             className="navbar-mobile__link"
             onClick={handleScroll}
