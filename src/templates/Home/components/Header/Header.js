@@ -26,7 +26,7 @@ const icons = [
   },
 ];
 
-const Header = () => {
+const Header = ({ post }) => {
   return (
     <div className="header">
       <ScrollDownElement element=".advantages" />
@@ -36,24 +36,24 @@ const Header = () => {
       <ParticleCircle className="header__particle-4 anim-xParticlePathHorizontal" />
       <div className="header__left-side">
         <div className="header__details">
-          <h1 className="title">Colors Frame</h1>
+          <h1 className="title">
+            <Link to={`/blog/${post?.slug}`}>{post?.title}</Link>
+          </h1>
           <p className="description">
-            Search through a variety of Home Painting Ideas. Learning
-            how to enjoy and use the world of colors and many more.
-            Check it out!
+            {post.description.childMarkdownRemark.excerpt}
           </p>
           <div className="header__buttons">
-            <Link className="to__blog" to="/blog">
-              <Button>To Blog</Button>
-            </Link>{" "}
-            <Button hasOutline>Contact</Button>
+            <Link className="to__blog" to={`/blog/${post?.slug}`}>
+              <Button>See more</Button>
+            </Link>
           </div>
         </div>
       </div>
       <div className="header__right-side">
-        <HeaderBackgroundIllustration className="header__background-illustration" />
-        <HeaderIllustration className="header__illustration" />
-        {/* <HeaderIcons icons={icons} /> */}
+        <HeaderBackgroundIllustration
+          className="header__background-illustration"
+          image={post.heroImage.fluid.src}
+        />
       </div>
     </div>
   );

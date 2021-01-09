@@ -2,7 +2,11 @@ import React from "react";
 import HomeTemplate from "../templates/Home";
 import Layout from "../ui/layouts/Layout";
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
+  const topPosts = data?.topPosts?.nodes;
+
+  console.log("topPosts: ", topPosts);
+
   return (
     <Layout
       seo={{
@@ -11,9 +15,62 @@ const HomePage = () => {
           "Colors Frame marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
       }}
     >
-      <HomeTemplate />
+      <HomeTemplate topPosts={topPosts} />
     </Layout>
   );
 };
+
+export const query = graphql`
+  query HomePosts {
+    allContentfulBlogPost(
+      sort: { fields: [publishDate], order: DESC }
+    ) {
+      edges {
+        node {
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            fluid(quality: 100) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          description {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
+      }
+    }
+    topPosts: allContentfulBlogPost(
+      filter: {}
+      limit: 3
+      sort: { fields: [publishDate], order: DESC }
+    ) {
+      nodes {
+        title
+        slug
+        heroImage {
+          fluid(maxWidth: 1180) {
+            ...GatsbyContentfulFluid
+          }
+        }
+        description {
+          childMarkdownRemark {
+            excerpt(pruneLength: 150)
+          }
+        }
+      }
+    }
+    tags: allContentfulBlogPost {
+      group(field: tags) {
+        fieldValue
+        totalCount
+      }
+    }
+  }
+`;
 
 export default HomePage;

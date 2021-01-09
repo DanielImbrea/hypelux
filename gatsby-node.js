@@ -1,4 +1,5 @@
 const Promise = require("bluebird");
+const _ = require("lodash");
 const path = require("path");
 const { paginate } = require("gatsby-awesome-pagination");
 
@@ -61,7 +62,9 @@ exports.createPages = ({ graphql, actions }) => {
         tags.forEach((tag, index) => {
           createPage({
             id: tag.slug,
-            path: `/blog/tags/${tag.fieldValue}`,
+            path: `/blog/tags/${_.kebabCase(
+              tag.fieldValue.toLowerCase(),
+            )}`,
             component: path.resolve(
               "./src/templates/TagView/index.js",
             ),

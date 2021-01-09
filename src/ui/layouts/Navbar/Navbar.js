@@ -112,6 +112,9 @@ const Navbar = ({ color, isFixed = true }) => {
           </div>
           <div className="navbar__right-side">
             <div className="navbar__links">
+              <div className="navbar__link">
+                <Link to="/blog">Blog</Link>
+              </div>
               <div
                 className="navbar__link"
                 data-section="advantages"
@@ -119,43 +122,12 @@ const Navbar = ({ color, isFixed = true }) => {
               >
                 About us
               </div>
-              {/* <div
-                className="navbar__link"
-                onClick={handleScroll}
-                data-section="solutions"
-              >
-                Solutions
-              </div> */}
-              {/* <div
-                className="navbar__link"
-                onClick={handleScroll}
-                data-section="projects"
-              >
-                Projects
-              </div>
-              <div
-                className="navbar__link"
-                onClick={handleScroll}
-                data-section="pricing"
-              >
-                Pricing
-              </div>
-              <div
-                className="navbar__link"
-                onClick={handleScroll}
-                data-section="testimonials"
-              >
-                Testimonials
-              </div> */}
               <div
                 className="navbar__link"
                 onClick={handleScroll}
                 data-section="contact"
               >
                 Contact
-              </div>
-              <div className="navbar__link">
-                <Link to="/blog">Blog</Link>
               </div>
               {!showSearch ? (
                 <div
