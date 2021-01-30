@@ -46,7 +46,7 @@ const collapseItems = [
 const ContactFaq = () => {
   return (
     <div className="contact" id="contact">
-      <div className="contact__inner">
+      <div className="contact__inner container">
         <ContactBgIllustration className="contact__bg-illustration" />
         <div className="contact__left-side">
           <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
