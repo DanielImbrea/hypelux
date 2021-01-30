@@ -58,7 +58,7 @@ const Advantages = () => {
         <div className="advantages__left-side">
           <div className="advantages__boxes">
             {items.map((item, key) => {
-              return <AdvantageBox {...item} index={key} />;
+              return <AdvantageBox {...item} index={key} key={key} />;
             })}
           </div>
         </div>

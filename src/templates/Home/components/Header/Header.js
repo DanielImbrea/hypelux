@@ -29,7 +29,7 @@ const icons = [
 const Header = ({ post }) => {
   return (
     <div className="header container">
-      <ScrollDownElement element=".advantages" />
+      <ScrollDownElement element=".posts" />
       <ParticleX className="header__particle-1 anim-xParticlePathVertical" />
       <ParticleX className="header__particle-2 anim-xParticlePathHorizontal" />
       <ParticleX className="header__particle-3 anim-xParticlePathHorizontal" />
@@ -52,7 +52,7 @@ const Header = ({ post }) => {
       <div className="header__right-side">
         <HeaderBackgroundIllustration
           className="header__background-illustration"
-          image={post.heroImage.fluid.src}
+          image={post?.heroImage?.fluid?.src}
         />
       </div>
     </div>

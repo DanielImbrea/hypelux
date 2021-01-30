@@ -5,11 +5,11 @@ import "./SubTitle.styles.scss";
 
 const SubTitle = ({ children, isDoubled = false }) => {
   return (
-    <p className="sub-title-container">
+    <div className="sub-title-container">
       <ScrollAnimation
         animateIn="scaleX"
         className="line"
-        animateOnce="true"
+        animateOnce
       />
       <ScrollAnimation animateIn="textFocusIn" animateOnce={true}>
         <div className="sub-title">{children}</div>
@@ -18,10 +18,10 @@ const SubTitle = ({ children, isDoubled = false }) => {
         <ScrollAnimation
           animateIn="scaleX"
           className="line line--right"
-          animateOnce="true"
+          animateOnce
         />
       )}
-    </p>
+    </div>
   );
 };
 

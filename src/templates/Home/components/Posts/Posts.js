@@ -89,9 +89,13 @@ const Posts = ({ posts }) => {
       <BlogBackgroundIllustration className="posts__illustration" />
       <BlogBackgroundRightIllustration className="posts__illustration posts__illustration--right" />
       <div className="posts__boxes">
-        {[...posts]?.slice(0, 6).map(post => {
+        {[...posts]?.slice(0, 6).map((post, key) => {
           return (
-            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <ScrollAnimation
+              animateIn="fadeIn"
+              animateOnce={true}
+              key={key}
+            >
               <PostPreview
                 title={post?.title}
                 date={post?.publishDate}
@@ -104,7 +108,7 @@ const Posts = ({ posts }) => {
         })}
       </div>
       <div className="posts__button">
-        <Link href="/blog">
+        <Link to="/blog">
           <div className="button">View More</div>
         </Link>
       </div>

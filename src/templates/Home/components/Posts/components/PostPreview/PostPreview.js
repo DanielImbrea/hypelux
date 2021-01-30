@@ -5,7 +5,6 @@ import Image from "@components/Image";
 import "./PostPreview.styles.scss";
 
 const PostPreview = ({ image, author, title, date, slug }) => {
-  console.log("image: ", image);
   return (
     <div className="post-preview">
       <div className="post-preview__image">
@@ -13,7 +12,7 @@ const PostPreview = ({ image, author, title, date, slug }) => {
       </div>
       <div className="post-preview__details">
         <div className="post-preview__header">
-          <Link href={`/blog/${slug}`}>
+          <Link to={`/blog/${slug}`}>
             <p className="post-preview__title">{title}</p>
           </Link>
           <span className="post-preview__description">
@@ -21,7 +20,7 @@ const PostPreview = ({ image, author, title, date, slug }) => {
           </span>
         </div>
         <Link
-          href={`/blog/${slug}`}
+          to={`/blog/${slug}`}
           className="post-preview__read-more"
         >
           <span className="post-preview__circle" />

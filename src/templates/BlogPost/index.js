@@ -12,8 +12,11 @@ export const query = graphql`
       description {
         childMarkdownRemark {
           excerpt(pruneLength: 200)
+          rawMarkdownBody
         }
       }
+      seoText
+      isFeatured
       heroImage {
         fluid(maxWidth: 1180) {
           ...GatsbyContentfulFluid

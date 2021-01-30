@@ -174,7 +174,7 @@ const ContactForm = () => {
             errors={errors}
             label={
               <label
-                for="terms"
+                htmlFor="terms"
                 className="contact-form__terms__text"
               >
                 {" "}

@@ -67,6 +67,7 @@ const ContactFaq = () => {
                 <ScrollAnimation
                   animateIn="fadeInUp"
                   delay={(key + 1) * 100}
+                  key={key}
                 >
                   <AccordionItem className="collapse-item">
                     <AccordionItemHeading>

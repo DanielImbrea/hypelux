@@ -29,7 +29,7 @@ const Checkbox = ({
             onChange={onChange}
             value={value}
           />
-          <span class="checkbox-custom rectangular" />
+          <span className="checkbox-custom rectangular" />
         </label>
 
         <label className="checkbox-text" htmlFor={id}>

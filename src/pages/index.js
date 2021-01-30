@@ -8,8 +8,6 @@ const HomePage = ({ data }) => {
     post => post?.node,
   );
 
-  console.log("data: ", data);
-
   return (
     <Layout
       seo={{

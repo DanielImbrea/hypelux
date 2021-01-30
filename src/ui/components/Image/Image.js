@@ -1,6 +1,5 @@
 import React from "react";
 import Img from "gatsby-image";
-import PropTypes from "prop-types";
 
 const Image = ({ data }) => {
   const { alt, title, childImageSharp, image } = data || {};
@@ -22,16 +21,6 @@ const Image = ({ data }) => {
     return <img src={data} alt="Title" />;
 
   return null;
-};
-
-Image.propTypes = {
-  imageInfo: PropTypes.shape({
-    alt: PropTypes.string,
-    childImageSharp: PropTypes.object,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-      .isRequired,
-    style: PropTypes.object,
-  }).isRequired,
 };
 
 export default Image;

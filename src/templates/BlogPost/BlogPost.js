@@ -35,8 +35,11 @@ const BlogPost = ({ data, pageContext }) => {
     <Layout
       header={{ color: "black", isFixed: false }}
       seo={{
-        title: `Devsplan | ${post.title}`,
-        description: post.description?.childMarkdownRemark?.excerpt,
+        title: `${post.title} | ColorsFrame`,
+        description: `${
+          post?.seoText ||
+          post.description?.childMarkdownRemark?.excerpt
+        } - ColorsFrame`,
         image: post?.heroImage?.fluid?.src,
       }}
     >
@@ -82,6 +85,12 @@ const BlogPost = ({ data, pageContext }) => {
                   <div className="blog-post__date">
                     <FiClock /> <div>{post.publishDate}</div>
                   </div>
+                </div>
+                <div className="blog-post__description">
+                  {
+                    post.description?.childMarkdownRemark
+                      ?.rawMarkdownBody
+                  }
                 </div>
                 <MDXRenderer>{post.body.childMdx.body}</MDXRenderer>
 
