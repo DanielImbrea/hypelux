@@ -33,7 +33,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__inner">
         <FooterBgIllustration className="footer__bg" />
-        <div className="footer__content">
+        <div className="footer__content container">
           <div className="footer__subscribe">
             <SectionDetails
               title="Subscribe Newsletter & get"
