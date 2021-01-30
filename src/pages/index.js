@@ -11,7 +11,7 @@ const HomePage = ({ data }) => {
   return (
     <Layout
       seo={{
-        title: "Colors Frame | Web development solutions",
+        title: "Colors Frame | Painting tips, tricks and tools",
         description:
           "Colors Frame marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
       }}
