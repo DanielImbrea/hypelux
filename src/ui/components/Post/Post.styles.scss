@@ -116,9 +116,7 @@
       transform: translateX(-50%);
       width: 10px;
       height: 3px;
-      @include themify($themes) {
-        color: themed("color-main");
-      }
+      color: $color-main;
     }
   }
   &__title {
@@ -135,9 +133,7 @@
       line-height: 38px;
     }
     &:hover {
-      @include themify($themes) {
-        color: themed("color-main");
-      }
+      color: $color-main;
     }
   }
   &__description {

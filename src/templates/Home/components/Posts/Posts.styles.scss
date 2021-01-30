@@ -74,13 +74,20 @@
     }
   }
   &__boxes {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 5%;
     z-index: 1;
+    .post-preview {
+      margin-bottom: 30px;
+    }
     @include breakpoint("to-tablet") {
       flex-direction: column;
       width: 100%;
     }
+  }
+  &__button {
+    margin-top: 10px;
   }
   &__illustration {
     position: absolute;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import ScrollAnimation from "react-animate-on-scroll";
 import Plx from "react-plx";
 
@@ -88,7 +89,7 @@ const Posts = ({ posts }) => {
       <BlogBackgroundIllustration className="posts__illustration" />
       <BlogBackgroundRightIllustration className="posts__illustration posts__illustration--right" />
       <div className="posts__boxes">
-        {posts.map(post => {
+        {[...posts]?.slice(0, 6).map(post => {
           return (
             <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <PostPreview
@@ -101,6 +102,11 @@ const Posts = ({ posts }) => {
             </ScrollAnimation>
           );
         })}
+      </div>
+      <div className="posts__button">
+        <Link href="/blog">
+          <div className="button">View More</div>
+        </Link>
       </div>
     </section>
   );

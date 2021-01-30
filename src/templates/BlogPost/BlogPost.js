@@ -41,7 +41,7 @@ const BlogPost = ({ data, pageContext }) => {
       }}
     >
       <div className="blog-post">
-        <div className="blog-post__inner">
+        <div className="blog-post__inner container">
           <div className="blog-post__left-side">
             <Image data={{ image: post.heroImage }} />
             <div className="blog-post__main">

@@ -19,7 +19,7 @@ const BlogLayout = ({
 }) => {
   return (
     <div className={classNames("blog-layout", className)}>
-      <div className="blog-layout__inner">
+      <div className="blog-layout__inner container">
         <div className="blog-layout__header">
           <BlogHeaderIllustration />
           <div className="blog-layout__header__text">

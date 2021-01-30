@@ -28,7 +28,7 @@ const icons = [
 
 const Header = ({ post }) => {
   return (
-    <div className="header">
+    <div className="header container">
       <ScrollDownElement element=".advantages" />
       <ParticleX className="header__particle-1 anim-xParticlePathVertical" />
       <ParticleX className="header__particle-2 anim-xParticlePathHorizontal" />

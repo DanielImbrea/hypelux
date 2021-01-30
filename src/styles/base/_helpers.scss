@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1480px;
   margin: 0 auto;
 
   @include breakpoint("to-tablet") {
@@ -35,7 +35,7 @@
 
   &--content {
     padding: 0 80px;
-    max-width: 1620px;
+    max-width: 1480px;
     @include breakpoint("to-tablet") {
       padding-left: 40px;
       padding-right: 40px;
