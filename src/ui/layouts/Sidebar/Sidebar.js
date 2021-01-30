@@ -18,21 +18,16 @@ const Sidebar = ({ topPosts, tags }) => {
             <Post {...post} index={key + 1} key={key} />
           ))}
         </Box>
-        <Affix>
-          <Box title="Tags">
-            {tags?.map(tag => (
-              <Category
-                name={tag.fieldValue}
-                count={tag.totalCount}
-              />
-            ))}
-          </Box>
-          <Box title="Latest Posts">
-            {topPosts.map((post, key) => (
-              <Post {...post} index={key + 1} key={key} />
-            ))}
-          </Box>
-        </Affix>
+        <Box title="Tags">
+          {tags?.map(tag => (
+            <Category name={tag.fieldValue} count={tag.totalCount} />
+          ))}
+        </Box>
+        <Box title="Latest Posts">
+          {topPosts.map((post, key) => (
+            <Post {...post} index={key + 1} key={key} />
+          ))}
+        </Box>
       </div>
     </aside>
   );

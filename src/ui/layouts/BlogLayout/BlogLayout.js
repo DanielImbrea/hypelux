@@ -43,7 +43,7 @@ const BlogLayout = ({
                 />
               ))}
             </div>
-            {hasPagination && (
+            {hasPagination && pagination?.numberOfPages > 1 && (
               <div className="blog-layout__posts__pagination">
                 <ReactPaginate
                   previousLabel={"previous"}

@@ -67,13 +67,13 @@ const parallaxData3 = [
   },
 ];
 
-const Posts = () => {
+const Posts = ({ posts }) => {
   return (
     <section className="posts" id="posts">
       <SectionDetails
         subTitle="Blog"
         title="Read our latest"
-        highlightedTitle="News"
+        highlightedTitle="Posts"
         isCentered={true}
       />
       <Plx className="posts__particle-1" parallaxData={parallaxData}>
@@ -88,38 +88,19 @@ const Posts = () => {
       <BlogBackgroundIllustration className="posts__illustration" />
       <BlogBackgroundRightIllustration className="posts__illustration posts__illustration--right" />
       <div className="posts__boxes">
-        <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
-          <PostPreview
-            title="Lorem ipsum dolor"
-            author="John Doe"
-            date="15 June"
-            slug="lorem-ipsum"
-          />
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          animateOnce={true}
-          delay={300}
-        >
-          <PostPreview
-            title="Lorem ipsum dolor"
-            author="John Doe"
-            date="15 June"
-            slug="lorem-ipsum"
-          />
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          animateOnce={true}
-          delay={500}
-        >
-          <PostPreview
-            title="Lorem ipsum dolor"
-            author="John Doe"
-            date="15 June"
-            slug="lorem-ipsum"
-          />
-        </ScrollAnimation>
+        {posts.map(post => {
+          return (
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+              <PostPreview
+                title={post?.title}
+                date={post?.publishDate}
+                slug={post?.slug}
+                image={post?.heroImage}
+                author="John Doe"
+              />
+            </ScrollAnimation>
+          );
+        })}
       </div>
     </section>
   );

@@ -4,8 +4,11 @@ import Layout from "../ui/layouts/Layout";
 
 const HomePage = ({ data }) => {
   const topPosts = data?.topPosts?.nodes;
+  const posts = data?.allContentfulBlogPost?.edges?.map(
+    post => post?.node,
+  );
 
-  console.log("topPosts: ", topPosts);
+  console.log("data: ", data);
 
   return (
     <Layout
@@ -15,7 +18,7 @@ const HomePage = ({ data }) => {
           "Colors Frame marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
       }}
     >
-      <HomeTemplate topPosts={topPosts} />
+      <HomeTemplate posts={posts} topPosts={topPosts} />
     </Layout>
   );
 };
