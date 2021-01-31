@@ -41,7 +41,7 @@ const Post = ({ frontmatter, fields }) => {
         ></p>
         <div className="post__footer">
           <div className="post__tags">
-            {tags.map(item => {
+            {tags?.map(item => {
               return <Tag item={item} />;
             })}
           </div>
