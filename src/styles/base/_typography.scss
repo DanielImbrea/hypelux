@@ -22,7 +22,7 @@ p {
   }
 
   @include breakpoint("from-laptop") {
-    margin: 0 0 35px;
+    margin: 0 0 25px;
   }
 }
 
