@@ -74,7 +74,7 @@ const BlogPost = ({ data, pageContext }) => {
               </div>
               <div className="blog-post__content">
                 <div className="blog-post__tags">
-                  {post.tags.map(tag => {
+                  {post?.tags?.map(tag => {
                     return <Tag item={tag} />;
                   })}
                 </div>
