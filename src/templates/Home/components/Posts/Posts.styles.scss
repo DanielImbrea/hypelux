@@ -84,6 +84,7 @@
     @include breakpoint("to-tablet") {
       flex-direction: column;
       width: 100%;
+      grid-template-columns: auto;
     }
   }
   &__button {
