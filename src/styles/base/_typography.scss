@@ -7,22 +7,24 @@ h6 {
   font-weight: 600;
   letter-spacing: -0.025em;
   color: $color-text;
+  margin: 15px 0;
+  margin-bottom: 12px;
 }
 
 $heading-size-1: 60px !default;
-$heading-size-2: 48px !default;
-$heading-size-3: 36px !default;
+$heading-size-2: 38px !default;
+$heading-size-3: 32px !default;
 $heading-size-4: 30px !default;
 $heading-size-5: 24px !default;
 $heading-size-6: 18px !default;
 
 p {
   @include breakpoint("to-tablet") {
-    margin: 0 0 25px;
+    margin: 0 0 10px;
   }
 
   @include breakpoint("from-laptop") {
-    margin: 0 0 25px;
+    margin: 0 0 20px;
   }
 }
 
