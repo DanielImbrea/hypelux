@@ -11,9 +11,8 @@ const HomePage = ({ data }) => {
   return (
     <Layout
       seo={{
-        title: "Colors Frame | Painting tips, tricks and tools",
-        description:
-          "Colors Frame marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
+        title: "Paint like a pro - Colors Frame",
+        description: `Best tips and tricks about spray-paint, so you can transform anything in art. Get the best paint sprayers for all your paiting jobs.`,
       }}
     >
       <HomeTemplate posts={posts} topPosts={topPosts} />

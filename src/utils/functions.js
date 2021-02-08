@@ -11,12 +11,7 @@ export const getExcerpt = (
   text = "",
   limit = DEFAULT_EXCERPT_LIMIT,
 ) => {
-  return (
-    text
-      .split(" ")
-      .slice(0, limit)
-      .join(" ") + "..."
-  );
+  return text.split(" ").slice(0, limit).join(" ") + "...";
 };
 
 /**

@@ -2,19 +2,22 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "@layouts/Layout";
 import TagView from "./TagView";
+import { capitalize } from "lodash";
 
 const TagRoute = ({ data, pathContext: { tag } }) => {
   const posts = data?.allContentfulBlogPost?.nodes;
   const topPosts = data?.topPosts?.nodes;
   const tags = data?.tags?.group;
 
+  const formattedTag = tag.split("-").join(" ");
+
   return (
     <Layout
       header={{ color: "black", isFixed: false }}
       seo={{
-        title: `Colors Frame | ${tag} - Web development solutions`,
-        description:
-          "Colors Frame is a digital marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
+        title: `${capitalize(formattedTag)} posts - Colors Frame`,
+        description: `Best tips and tricks about ${formattedTag}, so you can paint like a real pro. Get the best paint sprayers for all your paiting jobs.`,
+        keywords: ["spray-paint", tag],
       }}
     >
       <TagView
