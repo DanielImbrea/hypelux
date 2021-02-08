@@ -13,9 +13,8 @@ const BlogView = ({ data, pathContext }) => {
     <Layout
       header={{ color: "black", isFixed: false }}
       seo={{
-        title: "Colors Frame | Web development solutions",
-        description:
-          "Colors Frame is a digital marketing agency that brings high-level support for web development and transforms traditional midsize companies to the digital era.",
+        title: "Painting tips, tricks and tools - Colors Frame",
+        description: `Best tips and tricks about spray-paint, so you can transform anything in art. Get the best paint sprayers for all your paiting jobs.`,
       }}
     >
       <BlogTemplate
