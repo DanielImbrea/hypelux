@@ -89,7 +89,7 @@ const Posts = ({ posts }) => {
       <BlogBackgroundIllustration className="posts__illustration" />
       <BlogBackgroundRightIllustration className="posts__illustration posts__illustration--right" />
       <div className="posts__boxes">
-        {[...posts]?.slice(0, 6).map((post, key) => {
+        {[...posts]?.slice(0, 9).map((post, key) => {
           return (
             <ScrollAnimation
               animateIn="fadeIn"
