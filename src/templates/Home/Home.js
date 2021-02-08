@@ -12,7 +12,7 @@ const Home = ({ topPosts, posts }) => {
     <>
       <Header post={topPosts?.[0]} />
       <Posts posts={posts} />
-      <Advantages />
+      {/* <Advantages /> */}
       <ContactFaq />
     </>
   );
