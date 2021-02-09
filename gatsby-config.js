@@ -171,6 +171,12 @@ module.exports = {
           "https://ovidiumihaibelciug.us19.list-manage.com/subscribe/post?u=eb386f1915c9711d862b922af&amp;id=03b84737dd",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-189329480-1",
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-react-svg",
     //   options: {
