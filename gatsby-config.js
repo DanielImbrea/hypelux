@@ -33,6 +33,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "Gatsby Contentful starter",
+    siteUrl: `https://www.colorsframe.com`,
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
@@ -176,6 +177,9 @@ module.exports = {
       options: {
         trackingId: "UA-189329480-1",
       },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
     },
     // {
     //   resolve: "gatsby-plugin-react-svg",
