@@ -16,7 +16,7 @@ const TagRoute = ({ data, pathContext: { tag } }) => {
       header={{ color: "black", isFixed: false }}
       seo={{
         title: `${capitalize(formattedTag)} posts - Colors Frame`,
-        description: `Best tips and tricks about ${formattedTag}, so you can paint like a real pro. Get the best paint sprayers for all your paiting jobs.`,
+        description: `Best tips and tricks about ${formattedTag}, so you can paint like a real pro. Get the best paint sprayers for all your painting jobs.`,
         keywords: ["spray-paint", tag],
       }}
     >

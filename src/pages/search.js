@@ -13,7 +13,7 @@ const SearchPage = ({ data, ...rest }) => {
       header={{ color: "black", isFixed: false }}
       seo={{
         title: "Paint like a pro - Colors Frame",
-        description: `Best tips and tricks about spray-paint, so you can transform anything in art. Get the best paint sprayers for all your paiting jobs.`,
+        description: `Best tips and tricks about spray-paint, so you can transform anything in art. Get the best paint sprayers for all your painting jobs.`,
       }}
     >
       <SearchTemplate
