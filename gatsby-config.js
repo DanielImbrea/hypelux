@@ -33,7 +33,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "Gatsby Contentful starter",
-    siteUrl: `https://www.colorsframe.com`,
+    siteUrl: `https://colorsframe.com`,
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
