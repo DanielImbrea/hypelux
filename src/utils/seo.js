@@ -2,7 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import defaultImage from "@assets/images/thumbnail.png";
+import defaultImage from "@assets/images/thumbnail.jpeg";
 
 function SEO({ description, lang, meta, title, image, ...rest }) {
   const metaImage = image || defaultImage;
