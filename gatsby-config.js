@@ -64,6 +64,12 @@ module.exports = {
               theme: "Abyss",
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+            },
+          },
           "gatsby-remark-emoji",
           {
             resolve: "gatsby-remark-emojis",
