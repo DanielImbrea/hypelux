@@ -60,7 +60,7 @@ const Footer = () => {
             >
               <FooterSocial />
               <div className="footer__contact">
-                <p>colors_frame@gmail.com</p>
+                <p>colorsframe@gmail.com</p>
               </div>
             </ScrollAnimation>
 
