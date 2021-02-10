@@ -23,6 +23,7 @@
       font-size: 7rem;
       font-weight: 700;
       text-transform: uppercase;
+      text-align: center;
       @include breakpoint("to-tablet") {
         font-size: 2.5rem;
         white-space: nowrap;
