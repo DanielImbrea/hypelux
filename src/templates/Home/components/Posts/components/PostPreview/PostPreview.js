@@ -8,7 +8,9 @@ const PostPreview = ({ image, author, title, date, slug }) => {
   return (
     <div className="post-preview">
       <div className="post-preview__image">
-        <Image data={{ image }} />
+        <Link to={`/blog/${slug}`}>
+          <Image data={{ image }} />
+        </Link>
       </div>
       <div className="post-preview__details">
         <div className="post-preview__header">
