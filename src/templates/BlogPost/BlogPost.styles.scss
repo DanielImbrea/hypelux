@@ -119,6 +119,9 @@
       color: white;
       border-radius: 3px;
     }
+    img {
+      max-height: 700px;
+    }
     a {
       color: $color-main;
       &:hover {
